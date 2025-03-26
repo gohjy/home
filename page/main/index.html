@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Home | NUSHWeb</title>
+	<link href="/home/styles/home.css" rel="stylesheet" type="text/css" />
+	<link id="iconlink" rel="icon" type="image/png" href="/home/logos/logo.png">
+	<script src="/home/assets/maintenance/script.js"></script>
+	<style>:is(th,td):not([colspan]){width:calc(100 / 7 * 1%);}th[colspan]{border-left:1px solid var(--light-theme);border-right:1px solid var(--light-theme);}</style>
+
+	<link rel="manifest" href="/home/pwa/manifest.json" />
+	<script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+</head>
+<body style="display: none;">
+	<h1 id="page-header">NUSHWeb</h1>
+	<h2 id="salutation">Welcome, <span id="welcome"></span>.</h2>
+	
+	<div class="widget-box noselect">
+		<div class="widget" data-to="https://vle.learning.moe.edu.sg/" id="sls-w">
+			<div id="sls-w-bg"><img src="https://vle.learning.moe.edu.sg/mrv/assets/LogoCompressedLight.d5640e14.svg" alt="SLS"/></div>
+			SLS
+		</div>
+		<div class="widget" data-to="../homework" id="hw-w">
+			<div id="hw-w-bg"><img src="https://vle.learning.moe.edu.sg/mrv/assets/LogoCompressedLight.d5640e14.svg" alt="Homework"/></div>
+			Homework
+		</div>
+		<div class="widget" data-to="https://nushigh.edu.sg" id="tns-w">
+			<div id="tns-w-bg"><img src="https://taonan.moe.edu.sg/qql/slot/u182/2021/Heritage/School%20Crest%20and%20Motto/crest_image.jpg" alt="Invalid Image Detected"/></div>
+			NUSH Website
+		</div>
+	</div>
+	<!--
+	Template for announcements:
+	<div>
+		<header>Title</header>
+		<section>Content</section>
+	</div>
+	-->
+	<div id="announcements-container">
+		<div>
+			<header>...</header>
+			<section>...</section>
+		</div>
+	</div>
+
+	<div class="subctn">
+		<h2>eSpace</h2>
+		<iframe is="x-frame-bypass" src="https://espace2.nushigh.edu.sg" frameborder="0" scrolling="no" id="espace"></iframe>
+	</div>
+
+	<div id="calendar-box" class="subctn">
+		<h2>Calendar</h2>
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FSingapore&wkst=2&showPrint=0&hl=en_GB&showCalendars=0&title=NUS%20High%20Event%20Calendar%20(11gohjy)&mode=AGENDA&src=dDVpMXEyNGM3cnFtbDRtOW8wYzN0cDZoY2dyZ2U1MzdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23616161" 
+		 frameborder="0" scrolling="no">
+		</iframe>
+
+		<p style="margin: 0;">
+			<a href="https://calendar.google.com/calendar/embed?src=t5i1q24c7rqml4m9o0c3tp6hcgrge537%40import.calendar.google.com&ctz=Asia%2FSingapore" target="_blank">Open calendar in new tab</a>
+		</p>
+	</div>	
+	<div id="resources">
+		<details>
+			<summary id="resources-title">Resources</summary>
+			<details open>
+                <summary>Content Unavailable</summary>
+				<!--<summary>Revision</summary>
+				<a href="resources/revision/math/angles/">Math Revision - Angles</a>
+				<br/>
+				<a href="resources/revision/math/polygon/">Math Revision - Polygons</a>-->Not Available
+			</details>
+			<!--
+			<details open>
+				<summary>Science</summary>
+				<a href="https://is.gd/shortcircuitnotes">Notes - Short Circuits</a>
+			</details>
+			
+			<details open>
+				<summary>AMEC</summary>
+				<a href="resources/amec.html">P5 AMEC 2023</a>
+				<br/>
+				<em>Note: the above link will only work if you are in AMEC.</em>
+			</details>
+			<p><a href="/tnst">TNS Times</a></p>
+			-->
+		</details>
+	</div>
+	<div id="tools-container">
+        <div class="tool" data-link="https://outlook.office365.com/" data-name="Outlook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1101px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook"/>
+        </div>
+		<div class="tool" data-link="https://teams.microsoft.com/" data-name="Teams">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/640px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png" alt="Teams"/>
+		</div>
+		<div class="tool" data-link="https://onenote.com/" data-name="OneNote">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Microsoft_Office_OneNote_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_OneNote_%282019%E2%80%93present%29.svg.png" alt="OneNote"/>
+		</div>
+		<div class="tool" data-link="https://espace2.nushigh.edu.sg" data-name="eSpace 2.0">
+			<img src="/home/logos/logo.png" alt="eSpace"/>
+		</div>
+		<div class="tool" data-link="https://web.whatsapp.com/" data-name="WhatsApp Web">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" alt="WhatsApp"/>
+		</div>
+	</div>
+	<p><button id="sign-out-btn">Sign out</button></p>
+	<p>
+		<button id="toggletheme">
+			Light theme
+		</button>
+	</p>
+	<p>
+		<small><a href="../credits">Credits</a></small>
+	</p>
+	<script src="/home/scripts/home.js"></script>
+	<script src="/home/scripts/theme.js"></script>
+	<script src="/home/login_v2/scripts/check.js"></script>
+
+
+</body>
+</html>

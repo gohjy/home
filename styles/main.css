@@ -1,0 +1,174 @@
+@import "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap";
+
+:root {
+	/*theme config*
+	--main-ui-theme: light;*/
+	
+	/*proxies*/
+	--proxy-light-theme: #F3F5F8;
+	--proxy-dark-theme: #0B233F;
+	--proxy-light-rgba-theme: rgba(243,245,258,.1);
+	--proxy-dark-rgba-theme: rgba(11,35,63,.1);
+
+	/*colors*/
+	--light-theme: var(--proxy-light-theme);
+	--dark-theme: var(--proxy-dark-theme);
+	--light-rgba-theme: var(--proxy-light-rgba-theme);
+	--dark-rgba-theme: var(--proxy-dark-rgba-theme);
+	--grey-color: #6D7B8C;
+	--red-color: #FF0000;
+	--dark-green-color: darkgreen;
+	--dark-blue-color: darkslateblue;
+
+    --bold-weight: 500;
+
+    
+	/*misc*/
+	word-wrap: break-word;
+}
+
+
+:root.newtheme {
+	--light-theme: var(--proxy-dark-theme);
+	--dark-theme: var(--proxy-light-theme);
+	--light-rgba-theme: var(--proxy-dark-rgba-theme);
+	--dark-rgba-theme: var(--proxy-light-rgba-theme);
+}
+
+:root.newtheme a {
+	color: blue;
+}
+
+body {
+	background-color: var(--dark-theme);
+	text-align: center !important;
+}
+
+* {
+	font-family: "Rubik", monospace;
+	color: var(--light-theme);
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1, h2, h3 {
+    font-weight: var(--bold-weight);
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.noselect::selection, .noselect::-moz-selection {
+	background: transparent;
+}
+
+details {
+  border: 1px solid var(--light-theme);
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+summary {
+	font-weight: var(--bold-weight);
+	margin: -0.5em -0.5em 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+details[open] {
+	padding: 0.5em;
+}
+
+details[open] > summary {
+	border-bottom: 1px solid var(--light-theme);
+	margin-bottom: 0.5em !important;
+}
+
+:not(details) > details {
+	width: 50%;
+}
+
+details ~ details {
+	margin-top: 0.5em;
+}
+
+summary::marker {
+	cursor: pointer;
+}
+
+a {
+	color: cyan;
+	text-decoration: underline;
+	transition: text-decoration-thickness .3s linear;
+}
+
+a:hover, a:active, a:focus {
+	text-decoration-thickness: .2em;
+}
+
+img, iframe {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+[hidden], [aria-hidden] {
+	display: none;
+	visibility: hidden;
+}
+
+iframe {
+	height: 1000px;
+	width: 90%;
+}
+
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+	background: transparent;
+	border: 1px solid var(--light-theme);
+	color: var(--light-theme);
+	font-family: inherit;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+kbd {
+	font-family: monospace;
+	border: 1px solid var(--light-theme);
+	border-radius: 5px;
+}
+
+
+table {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid var(--light-theme);
+	border-collapse: collapse;
+}
+
+table tr {
+	border-bottom: 1px dashed var(--light-theme);
+	padding: 5px;
+}
+
+table tbody tr:last-child {
+	border-bottom: none;
+}
+
+table td {
+	width: 25%;
+}

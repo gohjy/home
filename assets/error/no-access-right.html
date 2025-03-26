@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>No access right!</title>
+	<link href="/styles/_main.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="/logos/5-X%202023.png">
+	<script src="/maintanence.js"></script>
+
+	<link rel="manifest" href="/home/pwa/manifest.json" />
+
+</head>
+
+<body style="display: none;">
+	<h1 id="main-header">You do not have access right to this content</h1>
+	<p><a href="/">Return to homepage</a></p>
+	<p><button onclick="localStorage.clear();location.replace('/login.html');">Login again</button></p>
+	<script src="/newLoginCheck.js"></script>
+	<script src="/theme.js"></script>
+</body>
+</html>

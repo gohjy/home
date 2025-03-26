@@ -1,0 +1,28 @@
+@import "main.css";
+
+#main-content {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 400px;
+    min-height: 400px;
+    border-radius: 6px;
+    background-color: #0eb1d2;
+    box-sizing: border-box;
+    padding: 15px;
+    filter: contrast(90%);
+
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.5);
+}
+
+#login-btn {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    cursor: pointer;
+}

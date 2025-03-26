@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Under maintainence mode</title>
+	<link href="/styles/_main.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="/logos/logo.png">
+</head>
+
+<body>
+	<h1 id="main-header">This website is currently under maintenance!</h1>
+	<p>Please come back later. Expected time of completion: <span id="stopTime" style="font-weight: bold;"></span></p>
+	<script>
+		document
+			.querySelector("#stopTime")
+			.appendChild(
+				document.createTextNode(
+					localStorage.getItem("expectedCompletionTime")
+				)
+			);
+	</script>
+</body>
+</html>

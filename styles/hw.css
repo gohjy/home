@@ -1,0 +1,12 @@
+@import "main.css";
+
+.upcoming, .upcoming * {
+	color: var(--grey-color);
+}
+.overdue, .overdue * {
+	color: red;
+}
+
+footer, footer * {
+	font-style: italic;
+}

@@ -1,0 +1,140 @@
+@import "main.css";
+
+#status {
+	display: inline-block;
+	border-radius: 6px;
+	background-color: rgba(255, 0, 0, .4);
+	color: inherit;
+	padding: 10px;
+	border: 1px solid red;
+	border-left-width: 5px !important;
+}
+
+#loginInnerDiv {
+	margin-top: auto !important;
+	margin-bottom: auto !important;
+	/*display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	width: 100%;*/
+}
+
+.site-header {
+    display: flex;
+    flex-flow: column;
+	
+}
+
+#login-div {
+	
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+	margin: auto;
+	color: var(--light-theme);
+	border-radius: 5px;
+}
+@media all and (max-width: 671px) {
+	.site-header {
+	 	height: 275px !important;
+		width: 100%;
+		display: block !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	.site-header .logo::after, .site-header .logo::before {
+		width: 100%;
+		background-size: contain;
+	}
+	.site-content#login-div {
+	  min-height: calc(var(--vh, 1vh)*100 - 275px);
+	  display: block;
+		position: absolute;
+		top: 275px;
+		right: 0;
+		left: 0;
+	}
+}
+
+@media all and (min-width: 672px) and (max-width: 1055px) {
+	.site-header {
+ 	  height: 450px !important;
+		width: 100%;
+		display: block !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	.site-header .logo::after, .site-header .logo::before {
+		width: 100%;
+		background-size: contain;
+	}
+	.site-content#login-div {
+    min-height: calc(var(--vh, 1vh)*100 - 450px) !important;
+    display: block !important;
+		position: absolute;
+		top: 450px;
+		right: 0;
+		left: 0;
+	}
+	
+}
+
+@media all and (min-width: 1056px) {
+	.site-header, .site-content#login-div {
+	  display: inline-block;
+		height: 100%;
+		width: 50%;
+	}
+	#login-div {
+	  display: inline-block;
+		z-index: 1;
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.logo:before {
+    display: block;
+    content: " ";
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--light-theme);
+}
+
+.logo:after {
+    display: block;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 50% !important;
+    content: " ";
+		position: absolute;
+		width: 50%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+    background-image: url("/home/logos/logo.png");
+}
+
+.greytext {
+	color: var(--grey-color);
+}
+
+
+
+
+input[type="password"], input[type="text"] {
+	color: black;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Login to NUSHWeb</title>
+	<link href="/home/styles/login.css" rel="stylesheet" type="text/css" />
+	<link id="iconlink" rel="icon" type="image/png" href="/home/logos/logo.png">
+	<script src="/home/assets/maintenance/script.js"></script>
+
+	<link rel="manifest" href="/home/pwa/manifest.json" />
+</head>
+<body>
+		<div class="site-header">
+			<div class="logo"></div>
+		</div>
+		<div class="site-content" id="login-div">
+			<div id="loginInnerDiv">
+				<h1>Login</h1>
+                <a id="login-btn" href="">
+                    <button>
+                        Login with NUSH Email Account
+                        <br/>
+                        (Hexauth Authenticator)
+                    </button>
+                </a>
+                <p class="greytext">Login powered by Hexauth, made by <a href="https://coding398.dev/" target="_blank">coding398</a></p>
+				<!--<p class="greytext">
+					Username<br/>
+					<input type="text" id="username"/><br/>
+					Password<br/>
+					<input type="password" id="password"/><br/>
+					<br/>
+					<button id="login-btn">Login</button>
+				</p>
+				<p id="status" style="display: none;"></p>-->
+			</div>
+		</div>
+		<script src="/home/login_v2/scripts/checkMirror.js"></script>
+		<script>
+			localStorage.setItem("login_goto", new URL(location.href).searchParams.get("to") || "/home/page/main");
+			const loginbtn = document.querySelector("#login-btn");
+			loginbtn.href = "https://auth.coding398.dev/go/microsoft?callback=" + location.origin + "/home/login_v2/microsoft/callback/";
+		</script>
+</body>
+</html>

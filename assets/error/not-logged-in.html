@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>NUSH102 - Not logged in!</title>
+	<link href="/home/styles/main.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="/home/logos/logo.png">
+	<script src="/home/maintanence.js"></script>
+
+	<link rel="manifest" href="/home/pwa/manifest.json" />
+</head>
+
+<body>
+	<h1 id="main-header">Please login to access this content</h1>
+	<p><a href="/home/login.html" id="linkthing">Login</a></p>
+	<p>Or <a href="/home/_landing/main">see what NUSHWeb is about</a></p>
+
+	<script src="/home/login_v2/scripts/checkMirror.js"></script>
+	<script>
+		let userObj = JSON.parse(localStorage.getItem("userData_loginv2"));
+		if (userObj !== null) {
+			location.replace("/home");
+		}
+		let sp = new URL(document.location.href).searchParams;
+		document.querySelector("#linkthing").setAttribute("href", "/home/login_v2/public/login_page/?to=" + sp.get("to"));
+	</script>
+</body>
+</html>

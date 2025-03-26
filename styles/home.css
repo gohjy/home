@@ -1,0 +1,252 @@
+@import "main.css";
+
+.widget-box {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.widget {
+	width: 100%;
+	font-size: 150%;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	display: inline-block !important;
+	margin: 2px;
+	cursor: pointer;
+	transition: all .3s linear;
+	color: var(--proxy-light-theme) !important;
+}
+
+.widget:hover {
+	filter: brightness(1.1);
+}
+
+#sls-w {background: var(--red-color);}#hw-w {background: var(--dark-blue-color);}#tns-w {background: var(--dark-green-color);}
+
+.widget > div {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+
+/*announcements*/
+#announcements-container > div > header {
+	font-size: 1.4em;
+	font-weight: var(--bold-weight);
+}
+
+#announcements-container > div > section {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+#announcements-container {
+	width: 100%;
+	background-color: var(--light-rgba-theme);
+	border-radius: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+	margin: 5px auto;
+}
+
+#announcements-container::before {
+	content: "Announcements";
+	display: block;
+	font-size: 1.6em;
+	font-weight: var(--bold-weight);
+	text-align: center;
+}
+
+#announcements-container > div {
+	background-color: var(--light-rgba-theme);
+	border-radius: 5px;
+	margin: 5px;
+	width: calc(100% - 2 * 5px);
+}
+
+/*tools*/
+#tools-container {
+	/*display*/
+	background-color: var(--light-rgba-theme);
+	width: 100%;
+	border-radius: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+	margin: 5px auto;
+
+	/*flexbox*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+#tools-container::before {
+	content: "Tools";
+	display: block;
+	flex-basis: 100%;
+	font-size: 1.6em;
+	font-weight: var(--bold-weight);
+	text-align: center;
+}
+
+#tools-container > p {
+	flex-basis: 100%;
+}
+
+#tools-container > div.tool {
+	height: 68px;
+	width: 68px;
+	border-radius: 7px;
+	background-color: var(--light-rgba-theme);
+	margin: 10px;
+	padding: 10px;
+	box-sizing: content-box;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#tools-container > div.tool > img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#tools-container > div.tool > span.description {
+	position: absolute;
+	bottom: 1px;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	text-shadow: 1px 1px 2px var(--dark-theme), -1px -1px 2px var(--dark-theme);
+}
+
+
+#sign-out-btn {
+	cursor: pointer;
+}
+
+
+@media all and (min-width: 672px) {
+	.widget {
+		font-size: 150%;
+		height: 88px;
+		flex-basis: 1 1 200px;
+		display: flex !important;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.widget-box {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+	}
+}
+
+
+
+
+
+
+
+
+
+.textmid {
+	text-align: center;
+}
+
+a{color:cyan;}
+
+
+
+
+.widget img {
+	float: left;
+}
+
+#welcome {
+	font-weight: var(--bold-weight);
+}
+
+#salutation {
+	font-weight: normal;
+}
+
+
+body > :not(h1, h2, h3, h4, h5, h6, button, input) {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#resources-title {
+	font-size: 1.6em;
+	font-weight: var(--bold-weight);
+	text-align: center;
+	margin: -0.35em -0.35em 0;
+}
+
+
+#calendar-box {
+	background-color: var(--light-rgba-theme);
+	border-radius: 5px;
+	padding: 5px;
+}
+/*#calendar-box::before {
+	content: "↗";
+	font-size: 210%;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: var(--proxy-dark-theme);
+	border-radius: 3px;
+}*/
+
+#calendar-box > iframe {
+	border-radius: 5px;
+	margin-top: 5px;
+	height: 600px;
+}
+
+#calendar-box > h2 {
+	font-size: 1.6em;
+	margin: 0;
+}
+
+.subctn { /* sub-container */
+	/*display*/
+	background-color: var(--light-rgba-theme);
+	width: 100%;
+	border-radius: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.subctn > h2 {
+	font-size: 1.6em;
+	margin: 0;
+}
+
+.subctn > iframe {
+	border-radius: 5px;
+	margin-top: 5px;
+	height: 600px;
+	border:solid 1px #777; width: 100% !important; max-width: 100% !important; height: 600px; margin-left: auto; margin-right: auto; box-sizing: border-box;
+}
