@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Login to NUSHWeb</title>
-	<link href="/home/styles/login.css" rel="stylesheet" type="text/css" />
-	<link id="iconlink" rel="icon" type="image/png" href="/home/logos/logo.png">
-	<script src="/home/assets/maintenance/script.js"></script>
+	<link href="/nushweb/styles/login.css" rel="stylesheet" type="text/css" />
+	<link id="iconlink" rel="icon" type="image/png" href="/nushweb/logos/logo.png">
+	<script src="/nushweb/assets/maintenance/script.js"></script>
 
-	<link rel="manifest" href="/home/pwa/manifest.json" />
+	<link rel="manifest" href="/nushweb/pwa/manifest.json" />
 </head>
 <body>
 		<div class="site-header">
@@ -36,11 +36,11 @@
 				<p id="status" style="display: none;"></p>-->
 			</div>
 		</div>
-		<script src="/home/login_v2/scripts/checkMirror.js"></script>
+		<script src="/nushweb/login_v2/scripts/checkMirror.js"></script>
 		<script>
-			localStorage.setItem("login_goto", new URL(location.href).searchParams.get("to") || "/home/page/main");
+			localStorage.setItem("login_goto", new URL(location.href).searchParams.get("to") || "/nushweb/page/main");
 			const loginbtn = document.querySelector("#login-btn");
-			loginbtn.href = "https://auth.coding398.dev/go/microsoft?callback=" + location.origin + "/home/login_v2/microsoft/callback/";
+			loginbtn.href = "https://auth.coding398.dev/go/microsoft?callback=" + location.origin + "/nushweb/login_v2/microsoft/callback/";
 		</script>
 </body>
 </html>
