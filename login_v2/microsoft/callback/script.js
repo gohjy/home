@@ -287,7 +287,7 @@ let userID = userJWT.em.slice(0, 8);
 let IDHash = SHA512(userID);
 
 
-fetch("/home/data/userData.json")
+fetch("/nushweb/data/userData.json")
 .then(function(res) {
     return res.json()
 }).then(function(jsonres) {
@@ -316,12 +316,12 @@ fetch("/home/data/userData.json")
 			if (goto) {
 				location.replace(goto);
 			} else {
-				location.replace("/home/page/main");
+				location.replace("/nushweb/page/main");
 			}
 
 		} else {
 			alert("Login failed, please ensure you login with your NUSH email account.");
-			location.replace("/home/login_v2/public/login_page");
+			location.replace("/nushweb/login_v2/public/login_page");
 		}
     } else {
         userJSON = JSON.stringify(user);
@@ -333,7 +333,7 @@ fetch("/home/data/userData.json")
 		if (goto) {
 			location.replace(goto);
 		} else {
-    		location.replace("/home/page/main");
+    		location.replace("/nushweb/page/main");
 		}
     }
 });
