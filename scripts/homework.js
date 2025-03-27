@@ -5,7 +5,7 @@ document.getElementById("iconlink").href = "./logos/logo.png";
 document.title = "Homework - " + (userObj.GEPclass||userObj.mixedFC);
 
 
-fetch("/home/homework.json")
+fetch("/nushweb/homework.json")
 .then(function(w) { return w.json(); })
 .then(function (homework) {
     console.log(homework)
