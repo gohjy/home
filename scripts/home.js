@@ -38,7 +38,7 @@ const isGuest = !!userObj.guest;
 
 {
     //reset logo
-	document.getElementById("iconlink").href = `/home/logos/logo.png`;
+	document.getElementById("iconlink").href = `/nushweb/logos/logo.png`;
 }
 	
 {
@@ -79,6 +79,6 @@ const isGuest = !!userObj.guest;
 	let btn = document.querySelector("#sign-out-btn");
 	btn.addEventListener("click", function() {
 		localStorage.removeItem("userData-loginv2");
-		location.assign("/home/_landing/main");
+		location.assign("/nushweb/_landing/main");
 	})
 }
