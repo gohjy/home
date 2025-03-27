@@ -1,11 +1,11 @@
 let userObj = JSON.parse(localStorage.getItem("userData-loginv2"));
 const isGuest = !!userObj.guest;
 
-document.getElementById("iconlink").href = "./logos/logo.png";
-document.title = "Homework - " + (userObj.GEPclass||userObj.mixedFC);
+/*document.getElementById("iconlink").href = "./logos/logo.png";
+document.title = "Homework - " + (userObj.GEPclass||userObj.mixedFC);*/
 
 
-fetch("/home/homework.json")
+fetch("/nushweb/homework.json")
 .then(function(w) { return w.json(); })
 .then(function (homework) {
     console.log(homework)
