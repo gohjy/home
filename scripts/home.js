@@ -34,6 +34,9 @@ const isGuest = !!userObj.guest;
 					location.href = elem.dataset.to;
 				});
 			}
+		} else {
+			elem.style.backgroundColor = "gray";
+			elem.textContent = "Currently Unavailable";
 		}
 	});
 }
