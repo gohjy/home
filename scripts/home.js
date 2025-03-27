@@ -24,14 +24,19 @@ const isGuest = !!userObj.guest;
 {
 	//widgets
 	document.querySelectorAll(".widget").forEach(elem => {
-		if (elem.id !== "hw-w") {
-			elem.addEventListener("click", function() {
-				window.open(elem.dataset.to);
-			});
+		if (elem.dataset.to) {
+			if (elem.id !== "hw-w") {
+				elem.addEventListener("click", function() {
+					window.open(elem.dataset.to);
+				});
+			} else {
+				elem.addEventListener("click", function() {
+					location.href = elem.dataset.to;
+				});
+			}
 		} else {
-			elem.addEventListener("click", function() {
-				location.href = elem.dataset.to;
-			});
+			elem.style.backgroundColor = "gray";
+			elem.textContent = "Currently Unavailable";
 		}
 	});
 }
