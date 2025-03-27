@@ -4,27 +4,27 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>NUSH102 - Not logged in!</title>
-	<link href="/home/styles/main.css" rel="stylesheet" type="text/css" />
-	<link rel="icon" type="image/png" href="/home/logos/logo.png">
-	<script src="/home/maintanence.js"></script>
+	<title>NUSHWeb - Not logged in!</title>
+	<link href="/nushweb/styles/main.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="/nushweb/logos/logo.png">
+	<script src="/nushweb/maintanence.js"></script>
 
-	<link rel="manifest" href="/home/pwa/manifest.json" />
+	<link rel="manifest" href="/nushweb/pwa/manifest.json" />
 </head>
 
 <body>
-	<h1 id="main-header">Please login to access this content</h1>
-	<p><a href="/home/login.html" id="linkthing">Login</a></p>
-	<p>Or <a href="/home/_landing/main">see what NUSHWeb is about</a></p>
+	<h1 id="main-header">Oops, you're not logged in!</h1>
+	<p><a href="/nushweb/login.html" id="linkthing">Login to NUSHWeb</a></p>
+	<p>Or <a href="/nushweb/_landing/main">see what NUSHWeb is about</a></p>
 
-	<script src="/home/login_v2/scripts/checkMirror.js"></script>
+	<script src="/nushweb/login_v2/scripts/checkMirror.js"></script>
 	<script>
 		let userObj = JSON.parse(localStorage.getItem("userData_loginv2"));
 		if (userObj !== null) {
-			location.replace("/home");
+			location.replace("/nushweb");
 		}
 		let sp = new URL(document.location.href).searchParams;
-		document.querySelector("#linkthing").setAttribute("href", "/home/login_v2/public/login_page/?to=" + sp.get("to"));
+		document.querySelector("#linkthing").setAttribute("href", "/nushweb/login_v2/public/login_page/?to=" + sp.get("to"));
 	</script>
 </body>
 </html>
